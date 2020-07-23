@@ -1,0 +1,16 @@
+<form action="login.php" method="post" onSubmit="return checkLoginForm()">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" placeholder="Username"/>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Password"/>
+    <input type="submit" value="Login"/>
+</form>
+<p id="vincoli-user">
+    L'username puó contenere solo lettere maiuscole o minuscole, numeri oppure simboli (_-.) ed essere lungo almeno 5 caratteri.
+</p>
+<p id="vincoli-password">
+    La password puó contenere solo lettere maiuscole o minuscole, numeri oppure simboli (_-.) ed essere lunga almeno 5 caratteri.
+</p>
+<p id="errori-login"></p>
+
+<a href="index.php">Torna al sito</a>

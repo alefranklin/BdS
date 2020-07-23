@@ -1,0 +1,7 @@
+.active-link{
+    pointer-events: all;
+}
+
+.inactive-link{
+    pointer-events: none;
+}
