@@ -56,4 +56,37 @@
         return $db->query($query);
     }
 
+    function uploadService($nome, $costo, $db_data){
+        $db = connect($db_data);
+        $nome = $db->real_escape_string($nome);
+        $categoria = $db->real_escape_string($categoria);
+        $costo = $db->real_escape_string($costo);
+        $query = "SELECT * FROM servizi WHERE nome='$nome' AND costo=$costo";
+        $result = $db->query($query);
+        echo $result->num_rows;
+        if($result->num_rows == 0){
+            $query = "INSERT INTO servizi (id,nome,costo)
+                    VALUES (NULL,'$nome',$costo)";
+            if($db->query($query) === true){
+                echo "Servizio caricato con successo";
+                return true;
+            } else {
+                echo "Servizio caricato non fatto";
+                return false;
+            }
+        } else return false;
+    }
+
+    function getServices($db_data){
+        $db = connect($db_data);
+        $query = "SELECT * FROM servizi";
+        return $db->query($query);
+    }
+
+    function removeService($id, $db_data){
+        $db = connect($db_data);
+        $query = "DELETE FROM servizi WHERE id = $id";
+        return $db->query($query);
+    }
+
 ?>

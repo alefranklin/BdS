@@ -1,3 +1,4 @@
+<div id="rimuovi-prodotto">
 <?php
     $products = getProducts($db_data);
 
@@ -17,3 +18,4 @@
 <?php
     }
 ?>
+</div>

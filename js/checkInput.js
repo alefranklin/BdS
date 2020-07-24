@@ -34,7 +34,7 @@ function checkLoginForm(){
 /*-- CONTROLLO INPUT PRODOTTI --*/
 
 function checkNome(input){
-    var regex = /(^[A-Za-z]{5,})+$/;
+    var regex = /^[a-zA-Z0-9\x20]{4,40}$/;
     return regex.test(input.value);
 }
 
@@ -44,7 +44,7 @@ function checkCategoria(input){
 }
 
 function checkCosto(input){
-    var regex = /^[0-9](\,[0-9]+)?$/;
+    var regex = /\d+(\.\d{1,2})?$/;
     console.log(input.value);
     return regex.test(input.value);
 }
@@ -91,4 +91,28 @@ function checkProductInput(){
     }
 
     return (nomeOk&&catOk&&costOk&&imgOk);
+}
+
+function checkServiceInput(){
+    var nome = document.getElementById("nome");
+    var costo = document.getElementById("costo");
+    var nomeOk = costOk = false;
+    var errori = document.getElementById("errori-service");
+    errori.innerText = "";
+
+    if(checkNome(nome)){
+        nomeOk = true;
+    } else {
+        nomeOk = false;
+        errori.innerText += "Nome non valido\n";
+    }
+
+    if(checkCosto(costo)){
+        costOk = true;
+    } else {
+        costOk = false;
+        errori.innerText += "Costo non valido\n";
+    }
+
+    return (nomeOk&&costOk);
 }

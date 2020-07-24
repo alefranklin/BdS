@@ -1,16 +1,18 @@
-<form method="post" enctype="multipart/form-data" action="add_product.php" onSubmit="return checkProductInput()">
-    <label for="nome">Nome prodotto</label>
-    <input type="text" name="nome" id="nome"/>
-    <label for="categoria">Categoria</label>
-    <select name="categoria" id="categoria">
-        <option value="strumento">Strumento</option>
-        <option value="accessorio">Accessorio</option>
-    </select>
-    <label for="costo">Costo</label>
-    <input type="number" name="costo" id="costo" min="0" step=".01"/>
-    <label for="immagine">Immagine</label>
-    <input type="file" name="immagine" id="immagine" accept="image/jpg, image/png, image/jpeg"/>
-    <input type="submit" value="Carica prodotto"/>
-</form>
+<div id="aggiungi-prodotto">
+    <form method="post" enctype="multipart/form-data" action="add_product.php" onSubmit="return checkProductInput()">
+        <label for="nome">Nome prodotto</label>
+        <input type="text" name="nome" id="nome"/>
+        <label for="categoria">Categoria</label>
+        <select name="categoria" id="categoria">
+            <option value="strumento">Strumento</option>
+            <option value="accessorio">Accessorio</option>
+        </select>
+        <label for="costo">Costo</label>
+        <input type="number" name="costo" id="costo" min="0" step=".01"/>
+        <label for="immagine">Immagine</label>
+        <input type="file" name="immagine" id="immagine" accept="image/jpg, image/png, image/jpeg"/>
+        <input type="submit" value="Carica prodotto"/>
+    </form>
 
-<p id="errori-product"></p>
+    <p id="errori-product"></p>
+</div>

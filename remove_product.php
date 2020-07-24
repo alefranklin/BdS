@@ -10,9 +10,9 @@
                 unlink($filename);
             }
         }
-        header("Location: admin.php?messaggio=2");
+        header("Location: admin.php?action=4&messaggio=2");
     } else {
-        header("Location: admin.php?errore=10");
+        header("Location: admin.php?action=4&errore=10");
     }
 
 ?>
