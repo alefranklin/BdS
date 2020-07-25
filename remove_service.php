@@ -5,7 +5,7 @@
         removeService($_POST['service_id'],$db_data);
         header("Location: admin.php?action=2&messaggio=4");
     } else {
-        header("Location: admin.php?action=2&errore=11");
+        header("Location: admin.php?action=2&errore=12");
     }
 
 ?>

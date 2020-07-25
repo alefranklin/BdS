@@ -56,17 +56,18 @@
         return $db->query($query);
     }
 
-    function uploadService($nome, $costo, $db_data){
+    function uploadService($nome, $costo, $descrizione, $db_data){
         $db = connect($db_data);
         $nome = $db->real_escape_string($nome);
         $categoria = $db->real_escape_string($categoria);
+        $descrizione = $db->real_escape_string($descrizione);
         $costo = $db->real_escape_string($costo);
-        $query = "SELECT * FROM servizi WHERE nome='$nome' AND costo=$costo";
+        $query = "SELECT * FROM servizi WHERE nome='$nome'";
         $result = $db->query($query);
         echo $result->num_rows;
         if($result->num_rows == 0){
-            $query = "INSERT INTO servizi (id,nome,costo)
-                    VALUES (NULL,'$nome',$costo)";
+            $query = "INSERT INTO servizi (id,nome,descrizione,costo)
+                    VALUES (NULL,'$nome','$descrizione',$costo)";
             if($db->query($query) === true){
                 echo "Servizio caricato con successo";
                 return true;

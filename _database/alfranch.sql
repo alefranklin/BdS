@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Creato il: Lug 24, 2020 alle 17:24
--- Versione del server: 10.4.13-MariaDB
--- Versione PHP: 7.4.8
+-- Host: localhost
+-- Creato il: Lug 25, 2020 alle 11:17
+-- Versione del server: 10.4.11-MariaDB
+-- Versione PHP: 7.4.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `amministratori` (
   `id` int(11) NOT NULL,
   `username` varchar(20) NOT NULL,
-  `password` char(32) NOT NULL
+  `password` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -43,15 +43,15 @@ INSERT INTO `amministratori` (`id`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `prenotazioni`
+-- Struttura della tabella `appuntamenti`
 --
 
-CREATE TABLE `prenotazioni` (
+CREATE TABLE `appuntamenti` (
   `id` int(11) NOT NULL,
-  `nome_cognome` varchar(80) NOT NULL,
+  `cliente` text NOT NULL,
   `data` date NOT NULL,
   `ora` time NOT NULL,
-  `email` varchar(40) NOT NULL
+  `servizi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -62,11 +62,18 @@ CREATE TABLE `prenotazioni` (
 
 CREATE TABLE `prodotti` (
   `id` int(11) NOT NULL,
-  `categoria` enum('strumento','accessorio','','') NOT NULL,
+  `categoria` enum('Strumento','Accessorio') NOT NULL,
   `nome` varchar(40) NOT NULL,
   `costo` decimal(10,0) NOT NULL,
-  `img_path` varchar(50) NOT NULL
+  `img_path` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `prodotti`
+--
+
+INSERT INTO `prodotti` (`id`, `categoria`, `nome`, `costo`, `img_path`) VALUES
+(6, 'Strumento', 'Chitarrone', '1', 'LogoSalone.png');
 
 -- --------------------------------------------------------
 
@@ -76,7 +83,8 @@ CREATE TABLE `prodotti` (
 
 CREATE TABLE `servizi` (
   `id` int(11) NOT NULL,
-  `nome` varchar(40) NOT NULL,
+  `nome` varchar(20) NOT NULL,
+  `descrizione` varchar(200) NOT NULL,
   `costo` decimal(10,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -92,11 +100,10 @@ ALTER TABLE `amministratori`
   ADD UNIQUE KEY `username` (`username`);
 
 --
--- Indici per le tabelle `prenotazioni`
+-- Indici per le tabelle `appuntamenti`
 --
-ALTER TABLE `prenotazioni`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `data` (`data`,`ora`);
+ALTER TABLE `appuntamenti`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indici per le tabelle `prodotti`
@@ -109,7 +116,8 @@ ALTER TABLE `prodotti`
 -- Indici per le tabelle `servizi`
 --
 ALTER TABLE `servizi`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `nome` (`nome`);
 
 --
 -- AUTO_INCREMENT per le tabelle scaricate
@@ -122,22 +130,22 @@ ALTER TABLE `amministratori`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT per la tabella `prenotazioni`
+-- AUTO_INCREMENT per la tabella `appuntamenti`
 --
-ALTER TABLE `prenotazioni`
+ALTER TABLE `appuntamenti`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT per la tabella `prodotti`
 --
 ALTER TABLE `prodotti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT per la tabella `servizi`
 --
 ALTER TABLE `servizi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

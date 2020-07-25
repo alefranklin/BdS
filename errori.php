@@ -11,10 +11,11 @@
     $errori[6] = "Costo non valido";
     $errori[7] = "Immagine non valida";
     $errori[8] = "File immagine giá esistente";
-    $errori[9] = "Prodotto uguale giá presente nel database";
+    $errori[9] = "Elemento uguale giá presente nel database";
+    $errori[10] = "Descrizione non valida";
     //errori eliminazione prodotto
-    $errori[10] = "Prodotto non rimosso";
+    $errori[11] = "Prodotto non rimosso";
     //errori eliminazione servizio
-    $errori[11] = "Seervizio non rimosso";
+    $errori[12] = "Servizio non rimosso";
 
 ?>

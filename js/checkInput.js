@@ -34,6 +34,7 @@ function checkLoginForm(){
 /*-- CONTROLLO INPUT PRODOTTI --*/
 
 function checkNome(input){
+    input.value = input.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");//normalizzo le lettere accentate
     var regex = /^[a-zA-Z0-9\x20]{4,40}$/;
     return regex.test(input.value);
 }
@@ -91,6 +92,12 @@ function checkProductInput(){
     }
 
     return (nomeOk&&catOk&&costOk&&imgOk);
+}
+
+function checkDescrizione(input){
+    input.value = input.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");//normalizzo le lettere accentate
+    var regex = /^[a-zA-Z0-9\x20]{20,200}$/;
+    return regex.test(input.value);
 }
 
 function checkServiceInput(){
