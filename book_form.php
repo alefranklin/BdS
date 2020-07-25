@@ -13,11 +13,20 @@
             <input type="text" id="cognome" name="cognome"/>
             <label for="data">Data</label>
             <select name="data" id="data">
-                <option value="ora">Ora</option>
+                <?php 
+                $week = getNextWeekFromTomorrow();
+                
+                for($i = 0; $i < 7; $i++){?>
+                <option value="<?= $week[$i]?>"><?= $week[$i]?></option>
+                <?php } ?>
             </select>
             <label for="ora">Ora</label>
             <select name="ora" id="ora">
-                <option value="ora">Ora</option>
+            <?php 
+                $hours = getHours();
+                for($i = 0; $i < 8; $i++){?>
+                <option value="<?= $hours['start'][$i]?>"><?= $hours['start'][$i]?></option>
+                <?php } ?>
             </select>
             <?php
                     $i = 0;

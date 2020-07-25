@@ -8,4 +8,34 @@
         if($page == end($path)) echo "inactive-link";
         else                    echo "active-link";
     }
+
+    function getNextWeekFromTomorrow(){
+        $today = date("Y-m-d",strtotime("tomorrow"));
+        for($i = 0; $i < 7; $i++){
+            $week[$i] = date('Y-m-d', strtotime($today." + $i days"));            
+        }
+        return $week;
+    }
+
+    function getHours(){
+        $startTime = date("H:i",60*60*7);
+    
+        for($i = 0; $i < 4; $i ++){
+            $hours['start'][$i] = date("H:i", strtotime($startTime." + $i hours"));
+            $hours['finish'][$i] = date("H:i", strtotime($startTime." + ".($i+1)." hours"));
+        }
+    
+        $startTime = date("H:i",60*60*13);
+    
+        for($i = 0; $i < 4; $i ++){
+            $hours['start'][$i+4] = date("H:i", strtotime($startTime." + $i hours"));
+            $hours['finish'][$i+4] = date("H:i", strtotime($startTime." + ".($i+1)." hours"));
+        }
+    
+        return $hours;
+    }
+
+    function checkAvailability(){
+
+    }
 ?>

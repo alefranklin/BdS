@@ -21,3 +21,5 @@ $about = "about.php";
         </ul>
     </div>
 </div>
+
+<a href="php-playground.php">PLAYGROUND</a>

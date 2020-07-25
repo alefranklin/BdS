@@ -90,4 +90,10 @@
         return $db->query($query);
     }
 
+    function getDayAppointments($day, $db_data){
+        $db = connect($db_data);
+        $query = "SELECT * FROM appuntamenti WHERE data = '$day'";
+        return $db->query($query);
+    }
+
 ?>

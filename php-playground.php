@@ -1,7 +1,13 @@
 <?php
-    $today = date("d-m-Y");
-    $tom = strtotime("tomorrow", $today);
+include("utility.php");
+include("db_connection.php");
 
-    //$today = date("d-m-Y", $tom);
-    echo $today;
+$week = getNextWeekFromTomorrow();
+
+$appointments = getDayAppointments($week[0], $db_data);
+
+if($appointments->num_rows){
+    print_r($appointments);
+}
+
 ?>
