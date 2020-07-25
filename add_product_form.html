@@ -1,5 +1,6 @@
 <div id="aggiungi-prodotto">
     <form method="post" enctype="multipart/form-data" action="add_product.php" onSubmit="return checkProductInput()">
+        <fieldset>
         <label for="nome">Nome prodotto</label>
         <input type="text" name="nome" id="nome"/>
         <label for="categoria">Categoria</label>
@@ -12,6 +13,7 @@
         <label for="immagine">Immagine</label>
         <input type="file" name="immagine" id="immagine" accept="image/jpg, image/png, image/jpeg"/>
         <input type="submit" value="Carica prodotto"/>
+        </fieldset>
     </form>
 
     <p id="errori-product"></p>

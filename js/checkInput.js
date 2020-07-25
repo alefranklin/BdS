@@ -103,7 +103,8 @@ function checkDescrizione(input){
 function checkServiceInput(){
     var nome = document.getElementById("nome");
     var costo = document.getElementById("costo");
-    var nomeOk = costOk = false;
+    var descrizione = document.getElementById("descrizione");
+    var nomeOk = costOk = descOk = false;
     var errori = document.getElementById("errori-service");
     errori.innerText = "";
 
@@ -114,6 +115,13 @@ function checkServiceInput(){
         errori.innerText += "Nome non valido\n";
     }
 
+    if(checkDescrizione(descrizione)){
+        descOk = true;
+    } else {
+        descOk = false;
+        errori.innerText += "Descrizione non valida \n";
+    }
+
     if(checkCosto(costo)){
         costOk = true;
     } else {
@@ -122,4 +130,17 @@ function checkServiceInput(){
     }
 
     return (nomeOk&&costOk);
+}
+
+function checkBookForm(){
+    var nome = document.getElementById("nome");
+    var cognome = document.getElementById("cognome");
+    var data = document.getElementById("data");
+    var ora = document.getElementById("ora");
+    var email = document.getElementById("email");
+
+    
+
+    return false;
+
 }

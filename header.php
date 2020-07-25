@@ -6,10 +6,10 @@ $prenota = "prenota.php";
 $about = "about.php";
 ?>
 
-<a href="#main">Vai al contenuto principale</a>
+<div id="salta-menu"><a href="#main">Vai al contenuto principale</a></div>
 <div id="menu" class="navbar">
     <div class="titolo-nav">
-        <img src="img/logo.png">
+        <img src="img/logo.png" alt="Logo del sito"/>
     </div>
     <div>
         <ul>

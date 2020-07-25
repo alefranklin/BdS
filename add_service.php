@@ -17,8 +17,6 @@
         header("Location: admin.php?action=1&errore=10");
     }
 
-
-
     if(uploadService($nome,$costo,$descrizione,$db_data)){
         header("Location: admin.php?action=1&messaggio=3");
     } else {

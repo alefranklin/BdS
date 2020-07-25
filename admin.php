@@ -2,12 +2,12 @@
 <?php include_once("utility.php");
 include_once("db_connection.php");
 session_start();?>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>La Bottega del Suono - Login Admin </title>
-        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
-        <script src="js/checkInput.js"></script>
+        <script src="js/checkInput.js" type="text/javascript"></script>
     </head>
 
     <body>

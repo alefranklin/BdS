@@ -1,12 +1,14 @@
 <div id="aggiungi-servizio">
-    <form action="add_service.php" method="post" onSubmit="return checkServiceInput()">
+    <form action="add_service.php" method="post" onsubmit="return checkServiceInput()">
+        <fieldset>
         <label for="nome">Nome servizio</label>
         <input type="text" name="nome" id="nome"/>
         <label for="descrizione">Descrizione servizio</label>
         <input type="text" name="descrizione" id="descrizione"/>
         <label for="costo">Costo servizio</label>
-        <input type="number" name="costo" id="costo" min="0" step=".01"/>
+        <input type="text" name="costo" id="costo"/>
         <input type="submit" value="Aggiungi prodotto"/>
+        </fieldset>
     </form>
     <p id="errori-service"></p>
 </div>
