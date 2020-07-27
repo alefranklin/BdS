@@ -15,9 +15,10 @@
             <select name="data" id="data">
                 <?php 
                 $week = getNextWeekFromTomorrow();
-                
-                for($i = 0; $i < 7; $i++){?>
-                <option value="<?= $week[$i]?>"><?= $week[$i]?></option>
+                for($i = 0; $i < 7; $i++){
+                // Inserisce il giorno nella select e lo disabilita se in quel giorno ci sono già 8 prenotazioni (giorno pieno)
+                ?>
+                <option value="<?= $week[$i]?>" <?= checkDayAvailability($week[$i],$db_data) ? "" : "disabled" ?>><?= $week[$i]?></option>
                 <?php } ?>
             </select>
             <label for="ora">Ora</label>
@@ -28,6 +29,7 @@
                 <option value="<?= $hours['start'][$i]?>"><?= $hours['start'][$i]?></option>
                 <?php } ?>
             </select>
+            <span>Seleziona i servizi che desideri prenotare (massimo 4)</span>
             <?php
                     $i = 0;
                     while ($row = $services->fetch_assoc()){
@@ -41,8 +43,10 @@
             
             <label for="email">E-mail</label>
             <input type="text" id="email" name="email"/>
+            <input type="submit" value="Prenota"/>
         </fieldset>
     </form>
+    <p id="errori-book"></p>
 </div>
     <?php           } else {
                 ?>

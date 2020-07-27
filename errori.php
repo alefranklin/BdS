@@ -17,5 +17,12 @@
     $errori[11] = "Prodotto non rimosso";
     //errori eliminazione servizio
     $errori[12] = "Servizio non rimosso";
-
+    //errori form prenotazione
+    $errori[13] = "Cogome non valido";
+    $errori[14] = "Data non valida";
+    $errori[15] = "Ora non valida";
+    $errori[16] = "E-mail non valida";
+    $errori[17] = "Nessun servizio selezionato";
+    $errori[18] = "Troppi servizi selezionati";
+    $errori[19] = "Prenotazione non effettuata";
 ?>

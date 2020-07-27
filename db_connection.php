@@ -64,15 +64,12 @@
         $costo = $db->real_escape_string($costo);
         $query = "SELECT * FROM servizi WHERE nome='$nome'";
         $result = $db->query($query);
-        echo $result->num_rows;
         if($result->num_rows == 0){
             $query = "INSERT INTO servizi (id,nome,descrizione,costo)
                     VALUES (NULL,'$nome','$descrizione',$costo)";
             if($db->query($query) === true){
-                echo "Servizio caricato con successo";
                 return true;
             } else {
-                echo "Servizio caricato non fatto";
                 return false;
             }
         } else return false;
@@ -96,4 +93,24 @@
         return $db->query($query);
     }
 
+    function book($cliente, $data, $ora, $servizi, $email, $db_data){
+        $db = connect($db_data);
+        $cliente = $db->real_escape_string($cliente);
+        $data = $db->real_escape_string($data);
+        $ora = $db->real_escape_string($ora);
+        $servizi = $db->real_escape_string($servizi);
+        $email = $db->real_escape_string($email);
+
+        $query = "SELECT * FROM appuntamenti WHERE data='$data' AND ora='$ora'";
+        $result = $db->query($query);
+        if($result->num_rows == 0){
+            $query = "INSERT INTO appuntamenti (id,cliente,data,ora,servizi,email)
+                      VALUES (NULL,'$cliente','$data','$ora','$servizi','$email')";
+            if($db->query($query) === true){
+                return true;
+            } else {
+                return false;
+            }
+        } else return false;
+    }
 ?>

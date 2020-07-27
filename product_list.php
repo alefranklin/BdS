@@ -1,5 +1,6 @@
-<div id="rimuovi-prodotto">
+<div id="lista-prodotti">
 <?php
+    include("db_connection.php");
     $products = getProducts($db_data);
 
     while($row = $products->fetch_assoc()){
@@ -9,13 +10,6 @@
         <span class="prodotto-nome"><?= $row['nome']; ?></span>
         <span class="prodotto-categoria"><?= $row['categoria']; ?></span>
         <span class="prodotto-costo"><?= $row['costo']; ?></span>
-        <form action="remove_product.php" method="post">
-            <fieldset>
-                <input type="hidden" value="<?= $row['id']; ?>" name="product_id"/>
-                <input type="hidden" value="<?= $row['img_path']; ?>" name="img_path"/>
-                <input type="submit" value="Elimina prodotto"/>
-            </fieldset>
-        </form>
     </div>
 <?php
     }

@@ -5,3 +5,7 @@
 .inactive-link{
     pointer-events: none;
 }
+
+fieldset {
+    border: 0;
+}

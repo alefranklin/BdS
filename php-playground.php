@@ -6,8 +6,8 @@ $week = getNextWeekFromTomorrow();
 
 $appointments = getDayAppointments($week[0], $db_data);
 
-if($appointments->num_rows){
-    print_r($appointments);
+while($row = $appointments->fetch_assoc()){
+    print_r($row);
 }
 
 ?>

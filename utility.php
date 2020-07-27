@@ -35,7 +35,10 @@
         return $hours;
     }
 
-    function checkAvailability(){
+    function checkDayAvailability($day, $db_data){
+        $dayApp = getDayAppointments($day, $db_data);
 
+        if($dayApp->num_rows == 8) return false;        //se in un giorno ci sono 8 appuntamenti (giorno pieno) ritorno falso
+        else                       return true;         //altrimenti vero
     }
 ?>
