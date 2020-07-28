@@ -89,8 +89,12 @@
 
     function getDayAppointments($day, $db_data){
         $db = connect($db_data);
-        $query = "SELECT * FROM appuntamenti WHERE data = '$day'";
+        $query = "SELECT * FROM appuntamenti WHERE data = '$day' ORDER BY ora ASC";
         return $db->query($query);
+    }
+
+    function getHourAppointments(){
+
     }
 
     function book($cliente, $data, $ora, $servizi, $email, $db_data){

@@ -11,9 +11,34 @@
 
     function getNextWeekFromTomorrow(){
         $today = date("Y-m-d",strtotime("tomorrow"));
-        for($i = 0; $i < 7; $i++){
-            $week[$i] = date('Y-m-d', strtotime($today." + $i days"));            
+        for($i = 0, $y = 0; $i < 8 ; $i++){
+            $date = date('Y-m-d', strtotime($today." + $i days"));            
+            if(date("N", strtotime($date)) != 7){
+                $week[$y] = $date;
+                $y ++;
+            }
         }
+        return $week;
+    }
+
+    function getWeekFromMonday($day){
+        $today = date("Y-m-d",strtotime("$day"));
+        for($i = 0, $y = 0; $i < 8 ; $i++){
+            $date = date('Y-m-d', strtotime($today." + $i days"));            
+            if(date("N", strtotime($date)) != 7){
+                $week[$y] = $date;
+                $y ++;
+            }
+        }
+        return $week;
+    }
+
+    function getThisWeek(){
+        $today = date("Y-m-d");
+        $thisDay = date("N");
+        $mondayDate = date("Y-m-d", strtotime($today." - ".($thisDay-1)." days"));
+        $week = getWeekFromMonday($mondayDate);
+    
         return $week;
     }
 
@@ -40,5 +65,10 @@
 
         if($dayApp->num_rows == 8) return false;        //se in un giorno ci sono 8 appuntamenti (giorno pieno) ritorno falso
         else                       return true;         //altrimenti vero
+    }
+
+    function trimSeconds($hour){
+        $hour = explode(":",$hour);
+        return $hour[0].":".$hour[1];
     }
 ?>
