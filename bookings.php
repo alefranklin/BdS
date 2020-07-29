@@ -7,8 +7,12 @@ if(isset($_GET['diffGiorni'])){
             echo "<span><a href=\"admin.php?action=0\">Torna a oggi</a></span>";
             echo "<span><a href=\"admin.php?action=0&diffGiorni=".($diff+1)."\">Giorno successivo</a></span>";
         } else {
-            echo "<span><a href=\"admin.php?action=0&diffGiorni=".($diff-1)."\">Giorno precendente</a></span>";
-            echo "<span><a href=\"admin.php?action=0&diffGiorni=".($diff+1)."\">Giorno successivo</a></span>";
+            if($diff == 6){
+                echo "<span><a href=\"admin.php?action=0&diffGiorni=".($diff-1)."\">Giorno precendente</a></span>";
+            } else {
+                echo "<span><a href=\"admin.php?action=0&diffGiorni=".($diff-1)."\">Giorno precendente</a></span>";
+                echo "<span><a href=\"admin.php?action=0&diffGiorni=".($diff+1)."\">Giorno successivo</a></span>";
+            }
         }
     } else {
         header("Location: admin.php?action=0");
