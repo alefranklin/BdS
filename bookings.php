@@ -4,14 +4,14 @@ if(isset($_GET['diffGiorni'])){
     $today = date("Y-m-d",strtotime("today + $diff days"));
     if($diff > 0 && $diff < 7){
         if($diff == 1){
-            echo "<span><a href=\"admin.php?action=0\">Torna a oggi</a></span>";
-            echo "<span><a href=\"admin.php?action=0&diffGiorni=".($diff+1)."\">Giorno successivo</a></span>";
+            echo "<span class=\"day-back\"><a href=\"admin.php?action=0\">Torna a oggi</a></span>";
+            echo "<span class=\"day-next\"><a href=\"admin.php?action=0&amp;diffGiorni=".($diff+1)."\">Giorno successivo</a></span>";
         } else {
             if($diff == 6){
-                echo "<span><a href=\"admin.php?action=0&diffGiorni=".($diff-1)."\">Giorno precendente</a></span>";
+                echo "<span class=\"day-back\"><a href=\"admin.php?action=0&amp;diffGiorni=".($diff-1)."\">Giorno precendente</a></span>";
             } else {
-                echo "<span><a href=\"admin.php?action=0&diffGiorni=".($diff-1)."\">Giorno precendente</a></span>";
-                echo "<span><a href=\"admin.php?action=0&diffGiorni=".($diff+1)."\">Giorno successivo</a></span>";
+                echo "<span class=\"day-back\"><a href=\"admin.php?action=0&amp;diffGiorni=".($diff-1)."\">Giorno precendente</a></span>";
+                echo "<span class=\"day-next\"><a href=\"admin.php?action=0&amp;diffGiorni=".($diff+1)."\">Giorno successivo</a></span>";
             }
         }
     } else {
@@ -19,7 +19,7 @@ if(isset($_GET['diffGiorni'])){
     }
 }  else {
     $today = date("Y-m-d");
-    echo "<span><a href=\"admin.php?action=0&diffGiorni=1\">Giorno successivo</a></span>";
+    echo "<span class=\"day-next\"><a href=\"admin.php?action=0&amp;diffGiorni=1\">Giorno successivo</a></span>";
 
 } 
 ?>
@@ -33,21 +33,28 @@ if(isset($_GET['diffGiorni'])){
         $hours = getHours();
     $row = "";
 
-
         for($i = 0; $i < count($hours['start']); $i++){
             if($row == ""){
-                $row = $dayAppointments->fetch_assoc();
-            }
-            print_r($row);
-            if($row){
+                if($row = $dayAppointments->fetch_assoc()){
+                    if(trimSeconds($row["ora"]) == $hours['start'][$i]){
+                        $appuntamenti[$i] = $row;
+                        $row = "";
+                    } else {
+                        $appuntamenti[$i] = 0;
+                    }
+                } else {
+                    $appuntamenti[$i] = 0;
+                }
+            } else {
                 if(trimSeconds($row["ora"]) == $hours['start'][$i]){
                     $appuntamenti[$i] = $row;
                     $row = "";
-                } else {
-                    $appuntamenti[$i] = "";
+                } else {                
+                    $appuntamenti[$i] = 0;
                 }
             }
         }
+
         for($i = 0; $i < count($appuntamenti); $i ++){
             ?>
             <div class="riga-prenotazione">
@@ -56,7 +63,7 @@ if(isset($_GET['diffGiorni'])){
                 </div>
                 <div class="dati-appuntamento">
                 <?php
-                if($appuntamenti[$i] != ""){
+                if($appuntamenti[$i]){
                     $cliente = $appuntamenti[$i]["cliente"];
                     $servizi = $appuntamenti[$i]["servizi"];
                     ?>

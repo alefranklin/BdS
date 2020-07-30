@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Creato il: Lug 25, 2020 alle 11:17
+-- Creato il: Lug 31, 2020 alle 01:36
 -- Versione del server: 10.4.11-MariaDB
 -- Versione PHP: 7.4.6
 
@@ -51,8 +51,24 @@ CREATE TABLE `appuntamenti` (
   `cliente` text NOT NULL,
   `data` date NOT NULL,
   `ora` time NOT NULL,
-  `servizi` text NOT NULL
+  `servizi` text NOT NULL,
+  `email` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `appuntamenti`
+--
+
+INSERT INTO `appuntamenti` (`id`, `cliente`, `data`, `ora`, `servizi`, `email`) VALUES
+(2, 'Alessandro Franchin', '2020-07-28', '09:00:00', 'accordo', ''),
+(3, 'Alessandro Franchin', '2020-07-28', '10:00:00', 'dawdawdawdadwa', ''),
+(4, 'Alesadnrafsd', '2020-07-28', '08:00:00', 'fewaafa', ''),
+(5, 'faafwwfafwa', '2020-07-28', '11:00:00', 'dwadwadawd', ''),
+(7, 'fdwwdaawwadfw', '2020-07-28', '15:00:00', 'dwawdawd', ''),
+(9, 'fdwwdaawwadfw', '2020-07-28', '17:00:00', 'dwawdawd', ''),
+(11, 'Aless Franch', '2020-07-29', '08:00:00', 'accordamento chitarereadd, Lucidatura tromba', 'alefra@hotma.it'),
+(12, 'Alessandro Franchin', '2020-07-29', '11:00:00', 'accordamento chitarereadd', 'franchinales@gmail.com'),
+(13, 'Alessandro Franchin', '2020-08-01', '11:00:00', 'accordamento chitarereadd', 'alesas@hotmail.it');
 
 -- --------------------------------------------------------
 
@@ -64,7 +80,7 @@ CREATE TABLE `prodotti` (
   `id` int(11) NOT NULL,
   `categoria` enum('Strumento','Accessorio') NOT NULL,
   `nome` varchar(40) NOT NULL,
-  `costo` decimal(10,0) NOT NULL,
+  `costo` double NOT NULL,
   `img_path` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -73,7 +89,7 @@ CREATE TABLE `prodotti` (
 --
 
 INSERT INTO `prodotti` (`id`, `categoria`, `nome`, `costo`, `img_path`) VALUES
-(6, 'Strumento', 'Chitarrone', '1', 'LogoSalone.png');
+(6, 'Strumento', 'Chitarrone', 1, 'LogoSalone.png');
 
 -- --------------------------------------------------------
 
@@ -83,10 +99,18 @@ INSERT INTO `prodotti` (`id`, `categoria`, `nome`, `costo`, `img_path`) VALUES
 
 CREATE TABLE `servizi` (
   `id` int(11) NOT NULL,
-  `nome` varchar(20) NOT NULL,
+  `nome` varchar(40) NOT NULL,
   `descrizione` varchar(200) NOT NULL,
   `costo` decimal(10,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `servizi`
+--
+
+INSERT INTO `servizi` (`id`, `nome`, `descrizione`, `costo`) VALUES
+(1, 'accordamento chitarereadd', 'dadwafgefguyadafgiyawdfgawfiufhuwqiqufgwhguiwfagawfuifafawfwa', '1'),
+(2, 'Lucidatura tromba', 'Ti lucidiamo la tromba in maniera pazzesca cosi diventa bella', '1');
 
 --
 -- Indici per le tabelle scaricate
@@ -103,7 +127,8 @@ ALTER TABLE `amministratori`
 -- Indici per le tabelle `appuntamenti`
 --
 ALTER TABLE `appuntamenti`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `data` (`data`,`ora`);
 
 --
 -- Indici per le tabelle `prodotti`
@@ -133,19 +158,19 @@ ALTER TABLE `amministratori`
 -- AUTO_INCREMENT per la tabella `appuntamenti`
 --
 ALTER TABLE `appuntamenti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT per la tabella `prodotti`
 --
 ALTER TABLE `prodotti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT per la tabella `servizi`
 --
 ALTER TABLE `servizi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

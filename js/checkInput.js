@@ -45,7 +45,7 @@ function checkCategoria(input){
 }
 
 function checkCosto(input){
-    var regex = /\d+(\.\d{1,2})?$/;
+    var regex = /^([0-9]+)(\.[0-9]{1,2})?$/;
     return regex.test(input.value.trim());
 }
 
