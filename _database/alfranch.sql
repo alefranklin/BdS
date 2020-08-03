@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Creato il: Lug 31, 2020 alle 01:36
+-- Creato il: Ago 03, 2020 alle 13:26
 -- Versione del server: 10.4.11-MariaDB
 -- Versione PHP: 7.4.6
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `alfranch`
 --
+CREATE DATABASE IF NOT EXISTS `alfranch` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `alfranch`;
 
 -- --------------------------------------------------------
 
@@ -55,21 +57,6 @@ CREATE TABLE `appuntamenti` (
   `email` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dump dei dati per la tabella `appuntamenti`
---
-
-INSERT INTO `appuntamenti` (`id`, `cliente`, `data`, `ora`, `servizi`, `email`) VALUES
-(2, 'Alessandro Franchin', '2020-07-28', '09:00:00', 'accordo', ''),
-(3, 'Alessandro Franchin', '2020-07-28', '10:00:00', 'dawdawdawdadwa', ''),
-(4, 'Alesadnrafsd', '2020-07-28', '08:00:00', 'fewaafa', ''),
-(5, 'faafwwfafwa', '2020-07-28', '11:00:00', 'dwadwadawd', ''),
-(7, 'fdwwdaawwadfw', '2020-07-28', '15:00:00', 'dwawdawd', ''),
-(9, 'fdwwdaawwadfw', '2020-07-28', '17:00:00', 'dwawdawd', ''),
-(11, 'Aless Franch', '2020-07-29', '08:00:00', 'accordamento chitarereadd, Lucidatura tromba', 'alefra@hotma.it'),
-(12, 'Alessandro Franchin', '2020-07-29', '11:00:00', 'accordamento chitarereadd', 'franchinales@gmail.com'),
-(13, 'Alessandro Franchin', '2020-08-01', '11:00:00', 'accordamento chitarereadd', 'alesas@hotmail.it');
-
 -- --------------------------------------------------------
 
 --
@@ -84,13 +71,6 @@ CREATE TABLE `prodotti` (
   `img_path` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dump dei dati per la tabella `prodotti`
---
-
-INSERT INTO `prodotti` (`id`, `categoria`, `nome`, `costo`, `img_path`) VALUES
-(6, 'Strumento', 'Chitarrone', 1, 'LogoSalone.png');
-
 -- --------------------------------------------------------
 
 --
@@ -103,14 +83,6 @@ CREATE TABLE `servizi` (
   `descrizione` varchar(200) NOT NULL,
   `costo` decimal(10,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dump dei dati per la tabella `servizi`
---
-
-INSERT INTO `servizi` (`id`, `nome`, `descrizione`, `costo`) VALUES
-(1, 'accordamento chitarereadd', 'dadwafgefguyadafgiyawdfgawfiufhuwqiqufgwhguiwfagawfuifafawfwa', '1'),
-(2, 'Lucidatura tromba', 'Ti lucidiamo la tromba in maniera pazzesca cosi diventa bella', '1');
 
 --
 -- Indici per le tabelle scaricate
@@ -158,19 +130,19 @@ ALTER TABLE `amministratori`
 -- AUTO_INCREMENT per la tabella `appuntamenti`
 --
 ALTER TABLE `appuntamenti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT per la tabella `prodotti`
 --
 ALTER TABLE `prodotti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT per la tabella `servizi`
 --
 ALTER TABLE `servizi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
