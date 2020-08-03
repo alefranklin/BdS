@@ -21,5 +21,6 @@ $about = "about.php";
         </ul>
     </div>
 </div>
-<!-- TODO Da rimuovere prima di consegnare -->
-<div><a href="php-playground.php">PLAYGROUND</a></div> 
+<!-- TODO Da rimuovere prima di consegnare
+<div><a href="php-playground.php">PLAYGROUND</a></div>
+-->

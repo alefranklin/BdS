@@ -44,9 +44,21 @@
         } else return false;
     }
 
-    function getProducts($db_data){
+    function getProducts($db_data,$priceOrder = "ASC"){
         $db = connect($db_data);
-        $query = "SELECT * FROM prodotti";
+        $query = "SELECT * FROM prodotti ORDER BY costo $priceOrder";
+        return $db->query($query);
+    }
+
+    function getInsturmentsProducts($db_data,$priceOrder = "ASC"){
+        $db = connect($db_data);
+        $query = "SELECT * FROM prodotti WHERE categoria='strumento' ORDER BY costo $priceOrder";
+        return $db->query($query);
+    }
+
+    function getAccessoriesProducts($db_data,$priceOrder = "ASC"){
+        $db = connect($db_data);
+        $query = "SELECT * FROM prodotti WHERE categoria='accessorio' ORDER BY costo $priceOrder";
         return $db->query($query);
     }
 
