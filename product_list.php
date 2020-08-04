@@ -21,23 +21,12 @@
 <?php
     include("db_connection.php");
     if(!isset($_GET['tipo']) || !isset($_GET['prezzo'])){
-        echo "filtro tutto";
-    $products = getProducts($db_data);  
+        $products = getProducts($db_data);  
     } else {
         $priceOrder = $_GET['prezzo'];
-        echo $priceOrder;
-        if($_GET['tipo'] == 'strumento'){
-            echo "filtro strumento";
-            $products = getInsturmentsProducts($db_data,$priceOrder);
-        } 
-        if($_GET['tipo'] == 'accessorio'){
-            echo "filtro accessorio";
-            $products = getAccessoriesProducts($db_data,$priceOrder);
-        }
-        if($_GET['tipo'] == "both"){
-            echo "filtro tutto";
-            $products = getProducts($db_data,$priceOrder);  
-        }
+        if($_GET['tipo'] == 'strumento')    $products = getInsturmentsProducts($db_data,$priceOrder);
+        if($_GET['tipo'] == 'accessorio')   $products = getAccessoriesProducts($db_data,$priceOrder);
+        if($_GET['tipo'] == "both")         $products = getProducts($db_data,$priceOrder);  
     }
     while($row = $products->fetch_assoc()){
 ?>
