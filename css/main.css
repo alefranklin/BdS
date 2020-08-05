@@ -9,3 +9,8 @@
 fieldset {
     border: 0;
 }
+
+#map {
+    width: 40%;
+    height: 500px;
+}
