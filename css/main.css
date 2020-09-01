@@ -22,7 +22,19 @@ a:hover{
     color: greenyellow;
 }
 
+#salta-menu{
+    display:none;
+}
+
+img{
+    position: relative;
+    width:90%;
+    left: 5%;
+    margin:auto;
+}
+
 #main{
+    position:relative;
     width: 90%;
     margin: auto;
     background-color: orange;
@@ -38,6 +50,8 @@ a:hover{
 }
 
 #menu{
+    padding-top: 1em;
+    padding-bottom: 1em;
     position:relative;
     background-color: brown;
 }
@@ -45,9 +59,12 @@ a:hover{
 #actual_menu{
     position:absolute;
     margin: 0;
-    right: 1em;
+    right: 5%;
     top: 20%;
-    
+}
+
+.titolo-nav{
+    margin-left:5%;
 }
 
 .active-link{
