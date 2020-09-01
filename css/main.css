@@ -1,3 +1,55 @@
+body{
+    width: 100%;
+    color:white;
+    background-color:black;
+    margin:0;
+    font-family: 'Gotham Rounded Medium';
+}
+
+a:link{
+    color: white;
+}
+
+a:active{
+    color: lightblue;
+}
+
+a:visited{
+    color: orange;
+}
+
+a:hover{
+    color: greenyellow;
+}
+
+#main{
+    width: 90%;
+    margin: auto;
+    background-color: orange;
+    text-shadow: 0 0 1em black;
+}
+
+.navbar li{
+    display: inline-block;
+}
+
+.navbar div{
+    display: inline-block;
+}
+
+#menu{
+    position:relative;
+    background-color: brown;
+}
+
+#actual_menu{
+    position:absolute;
+    margin: 0;
+    right: 1em;
+    top: 20%;
+    
+}
+
 .active-link{
     pointer-events: all;
 }
