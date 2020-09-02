@@ -15,7 +15,10 @@
     <body>
         <?php include("header.php"); ?>
         <div id="main">
-            <?php include("service_list.php"); ?>
+            <div id="content">
+                <h1>I nostri servizi</h1>
+                <?php include("service_list.php"); ?>
+            </div>
         </div>
         <?php include("footer.php"); ?>
     </body>

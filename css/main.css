@@ -12,20 +12,28 @@
         
     }
 
-    a:link{
-        color: white;
+    #actual_menu li:not(:first-of-type){
+        border-left: 0.1em solid lightgray;
     }
 
-    a:active{
+    .active-link{
+        padding-left:0.5em;
+    }
+
+    a:link{
         color: lightblue;
     }
 
+    a:active{
+        color:  greenyellow;
+    }
+
     a:visited{
-        color: orange;
+        color: blueviolet;
     }
 
     a:hover{
-        color: greenyellow;
+        color: violet;
     }
 
     #salta-menu{
@@ -81,7 +89,21 @@
         text-shadow: 0 0 1em black;
     }
 
-    #main div{
+    .prodotto{
+        text-align:center;
+        display: inline-block;
+        width:24%;
+        /*padding-left:1%;
+        padding-right:1%;*/
+    }
+
+    .prodotto-immagine{
+        overflow:hidden;
+        height: 20em;
+        width:100%;
+    }
+
+    #content{
         padding: 1em;
     }
 
@@ -118,7 +140,14 @@
     .inactive-link{
         font-weight: bold;
         font-size:1.5em;
+        text-decoration:none;
+        padding-left:0.5em;
+        padding-right: 0.5em;
         pointer-events: none;
+    }
+
+    .inactive-link:visited{
+        color: orange;
     }
 
     fieldset {

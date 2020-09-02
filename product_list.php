@@ -31,10 +31,11 @@
     while($row = $products->fetch_assoc()){
 ?>
     <div class="prodotto">
-        <img src="img/prodotti/<?= $row['img_path'];?>" alt="Immagine prodotto: <?= $row['nome'];?>"/>
-        <span class="prodotto-nome"><?= $row['nome']; ?></span>
-        <span class="prodotto-categoria"><?= $row['categoria']; ?></span>
-        <span class="prodotto-costo"><?= $row['costo']; ?></span>
+        <h2 class="prodotto-nome"><?= $row['nome']; ?></h2>
+        <img class="prodotto-immagine" src="img/prodotti/<?= $row['img_path'];?>" alt="Immagine prodotto: <?= $row['nome'];?>"/>
+        
+        <!--<span class="prodotto-categoria"></*?= $row['categoria']; ?></span>-->
+        <span class="prodotto-costo"><?= $row['costo']; ?> Euro</span>
     </div>
 <?php
     }

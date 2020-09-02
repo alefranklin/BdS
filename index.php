@@ -16,7 +16,7 @@
     <body>
         <?php include("header.php"); ?>
         <div id="main">
-            <div>
+            <div id="content">
                 <p>
                     <h1>La Bottega del Suono</h1>
                     <span>Dal 1985 il tuo punto di riferimento per l'acquisto e la manutenzione dei tuoi strumenti musicali.</span>

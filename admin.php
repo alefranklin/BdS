@@ -12,8 +12,8 @@ session_start();?>
 
     <body>
         <div id="main">
-            <div>
-                Questa é la pagina di login amministratore
+            <div id="content">
+                Questa è la pagina di login amministratore
                 
                 <?php
                     if(isset($_GET['errore'])){

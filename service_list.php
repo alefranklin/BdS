@@ -6,7 +6,8 @@
     while($row = $products->fetch_assoc()){
 ?>
     <div class="servizio">
-        <span class="servizio-nome"><?= $row['nome']; ?></span>
+        <h2 class="servizio-nome"><?= $row['nome']; ?></h2>
+        <p class="servizio-desc"><?= $row['descrizione']; ?></p>
         <span class="servizio-costo"><?= $row['costo']; ?></span>
     </div>
 <?php
