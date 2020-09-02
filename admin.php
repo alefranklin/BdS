@@ -12,21 +12,23 @@ session_start();?>
 
     <body>
         <div id="main">
-            Questa é la pagina di login amministratore
-            
-            <?php
-                if(isset($_GET['errore'])){
-                    echo "<p id=\"errore-get\">".$errori[$_GET['errore']]."</p>";
-                }
-                if(isset($_GET['messaggio'])){
-                    echo "<p id=\"messaggio-get\">".$messaggi[$_GET['messaggio']]."</p>";
-                }
-                if(!isset($_SESSION['id'])){      
-                    include("login_form.html");
-                } else {
-                    include("logged_admin.php");
-                }
-            ?>
+            <div>
+                Questa é la pagina di login amministratore
+                
+                <?php
+                    if(isset($_GET['errore'])){
+                        echo "<p id=\"errore-get\">".$errori[$_GET['errore']]."</p>";
+                    }
+                    if(isset($_GET['messaggio'])){
+                        echo "<p id=\"messaggio-get\">".$messaggi[$_GET['messaggio']]."</p>";
+                    }
+                    if(!isset($_SESSION['id'])){      
+                        include("login_form.html");
+                    } else {
+                        include("logged_admin.php");
+                    }
+                ?>
+            </div>
         </div>
 
         
