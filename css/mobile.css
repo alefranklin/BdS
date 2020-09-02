@@ -1,0 +1,5 @@
+@media handheld, screen and (max-width: 594px) {
+    body{
+        background-color: blue;
+    }
+}

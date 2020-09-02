@@ -8,6 +8,8 @@
         In questa pagina è possibile prenotare un appuntamento con un nostro esperto di musica."/>
         <meta name="keywords" content="musica, strumenti musicali, prenota servizio"/>
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <link rel="stylesheet" type="text/css" href="css/mobile.css"/>
+        <link rel="stylesheet" href= "<?= $host_path."css/print.css"?>"  media="print"  type="text/css" />
         <script src="js/checkInput.js" type="text/javascript"></script>
     </head>
 

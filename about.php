@@ -8,6 +8,8 @@
         Qui sono presenti le informazioni riguardanti la nostra attività."/>
         <meta name="keywords" content="musica, strumenti musicali, chitarra"/>
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <link rel="stylesheet" type="text/css" href="css/mobile.css"/>
+        <link rel="stylesheet" href= "<?= $host_path."css/print.css"?>"  media="print"  type="text/css" />
         <script src="js/map.js" type="text/javascript"></script>
     </head>
     
