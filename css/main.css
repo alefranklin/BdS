@@ -133,6 +133,10 @@
         top: 20%;
     }
 
+    #menuShowMobile {
+        display: none;
+    }
+
     .titolo-nav{
         margin-left:5%;
     }
