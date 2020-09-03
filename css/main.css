@@ -93,14 +93,18 @@
         text-align:center;
         display: inline-block;
         width:24%;
+        
+        background-size: 24%;
         /*padding-left:1%;
         padding-right:1%;*/
     }
 
     .prodotto-immagine{
-        overflow:hidden;
+        position: static;
+        width:auto;
         height: 20em;
-        width:100%;
+        overflow:hidden;
+        /*background-size: 70%;*/
     }
 
     #content{

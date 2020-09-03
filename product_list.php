@@ -33,7 +33,7 @@
     <div class="prodotto">
         <h2 class="prodotto-nome"><?= $row['nome']; ?></h2>
         <img class="prodotto-immagine" src="img/prodotti/<?= $row['img_path'];?>" alt="Immagine prodotto: <?= $row['nome'];?>"/>
-        
+        <br>
         <!--<span class="prodotto-categoria"></*?= $row['categoria']; ?></span>-->
         <span class="prodotto-costo"><?= $row['costo']; ?> Euro</span>
     </div>
