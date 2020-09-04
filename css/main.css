@@ -9,12 +9,28 @@
 
     #header, #main{
         display: inline-block;
-        
+        /*position: block;*/
     }
 
-    #actual_menu li:not(:first-of-type){
-        border-left: 0.1em solid lightgray;
+    #menu div{
+        /*height: 100%;
+        width: 45%;*/
+        display:inline-block;    
     }
+
+    #actual_menu li{
+        text-align: center;
+    }
+
+    #actual_menu li:not(:first-child):before{
+        content: " -";
+        /*border-left: 0.1em solid lightgray;*/
+    }
+
+    /*#actual_menu li:not(:last-child)::after{
+        /*content: " - ";
+        /*border-left: 0.1em solid lightgray;
+    }*/
 
     .active-link{
         padding-left:0.5em;
@@ -93,10 +109,15 @@
         text-align:center;
         display: inline-block;
         width:24%;
-        
-        background-size: 24%;
+        /*background-size: 24%;
         /*padding-left:1%;
         padding-right:1%;*/
+    }
+
+    @media screen and (min-width:595px) and (max-width:730px){
+        .prodotto{
+            width:32%;
+        }
     }
 
     .prodotto-immagine{
@@ -120,6 +141,8 @@
     }
 
     #menu{
+        overflow: auto;
+        height: 10%;
         padding-top: 1em;
         padding-bottom: 1em;
         position:relative;
@@ -127,10 +150,10 @@
     }
 
     #actual_menu{
-        position:absolute;
+        float:right;
+        background-color: #292521;
         margin: 0;
-        right: 5%;
-        top: 20%;
+        margin-right: 5%;
     }
 
     .titolo-nav{

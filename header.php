@@ -11,6 +11,7 @@ $about = "about.php";
     <div class="titolo-nav">
         <img src="img/logo.png" alt="Logo del sito"/>
     </div>
+    
     <div id="actual_menu">
         <ul>
             <li><a class="<?php isActive($index)?>" href="<?= $index?>">Home</a></li>

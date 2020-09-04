@@ -2,7 +2,7 @@
 <?php include_once("utility.php");?>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>La Bottega del Suono - Servizi</title>
+        <title>Servizi - La Bottega del Suono</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="description" content="Questo è il sito del negozio La Bottega del Suono.
         Qui potrai vedere la lista dei nostri servizi."/>

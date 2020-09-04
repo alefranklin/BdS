@@ -2,7 +2,7 @@
 <?php include_once("utility.php");?>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>La Bottega del Suono - Prenota</title>
+        <title>Prenota - La Bottega del Suono</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="description" content="Questo è il sito del negozio La Bottega del Suono.
         In questa pagina è possibile prenotare un appuntamento con un nostro esperto di musica."/>
@@ -16,8 +16,10 @@
     <body>
         <?php include("header.php"); ?>
         <div id="main">
-            Pagina di prenotazione
-            <?php include("book_form.php"); ?>
+            <div id="content">
+                Pagina di prenotazione
+                <?php include("book_form.php"); ?>
+            </div>
         </div>
         <?php include("footer.php"); ?>
     </body>
