@@ -49,6 +49,10 @@
         color: lightgrey;
     }
 
+    #main a:visited{
+        color: purple;
+    }
+
     a:hover{
         color: violet;
     }
