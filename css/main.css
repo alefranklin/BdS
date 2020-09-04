@@ -106,7 +106,7 @@
         left:5%;
         
         width: 90%;
-        background-color: orange;
+        background-color: #e65c00;
         text-shadow: 0 0 1em black;
     }
 
@@ -187,7 +187,7 @@
     }
 
     .inactive-link:visited{
-        color: orange;
+        color:#e65c00;
     }
 
     fieldset {
