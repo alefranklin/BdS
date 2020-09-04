@@ -156,6 +156,10 @@
         margin-right: 5%;
     }
 
+    #menuShowMobile {
+        display: none;
+    }
+
     .titolo-nav{
         margin-left:5%;
     }
