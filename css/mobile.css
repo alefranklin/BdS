@@ -19,9 +19,7 @@
         display:inline-block;    
     }
 
-    #actual_menu li{
-        text-align: center;
-    }
+    
 
     /*#actual_menu li:not(:first-child):before{
         content: " -";
@@ -131,8 +129,10 @@
         padding: 1em;
     }
 
-    .navbar li{
-        
+    #actual_menu li{
+        display:inline-block;
+        width: 100%;
+        text-align: center;
     }
 
     /*.navbar div{
@@ -149,10 +149,8 @@
     }
 
     #actual_menu{
-        
         background-color: #292521;
         margin: 0;
-        margin-right: 5%;
     }
 
     /*#menuShowMobile {
