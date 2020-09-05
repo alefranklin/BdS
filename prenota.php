@@ -24,6 +24,11 @@
                 <?php include("book_form.php"); ?>
             </div>
         </div>
+
+        <div id="prenota-print">
+          Per prendere appuntamento con uno dei nostri esperti ti preghiamo di conttattare il numero 555-9933902. </br>
+          Oppure puoi venirci a trovare in negozio all'indirizzo: Via Trieste, 63, 35121 Padova PD.
+        </div>
         <?php include("footer.php"); ?>
     </body>
 </html>
