@@ -9,25 +9,6 @@
       font-family: 'Gotham Rounded Medium';
   }
 
-/*
-  .titolo-nav img
-  {
-    position: absolute;
-    left: 45%;
-    -ms-transform: translateX(-45%);
-    transform: translateX(-45%);
-  }
-
-  #content
-  {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    text-align: inherit;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-*/
   #actual_menu, #salta-menu, #menuShowMobile, #admin-login, #back-menu, #content img, #filtri form, #form-prenotazione
   {
     display: none;

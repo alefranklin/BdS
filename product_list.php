@@ -21,19 +21,19 @@
 <?php
     include("db_connection.php");
     if(!isset($_GET['tipo']) || !isset($_GET['prezzo'])){
-        $products = getProducts($db_data);  
+        $products = getProducts($db_data);
     } else {
         $priceOrder = $_GET['prezzo'];
         if($_GET['tipo'] == 'strumento')    $products = getInsturmentsProducts($db_data,$priceOrder);
         if($_GET['tipo'] == 'accessorio')   $products = getAccessoriesProducts($db_data,$priceOrder);
-        if($_GET['tipo'] == "both")         $products = getProducts($db_data,$priceOrder);  
+        if($_GET['tipo'] == "both")         $products = getProducts($db_data,$priceOrder);
     }
     while($row = $products->fetch_assoc()){
 ?>
     <div class="prodotto">
         <h2 class="prodotto-nome"><?= $row['nome']; ?></h2>
         <img class="prodotto-immagine" src="img/prodotti/<?= $row['img_path'];?>" alt="Immagine prodotto: <?= $row['nome'];?>"/>
-        <br>
+        
         <!--<span class="prodotto-categoria"></*?= $row['categoria']; ?></span>-->
         <span class="prodotto-costo"><?= $row['costo']; ?> Euro</span>
     </div>

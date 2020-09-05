@@ -24,6 +24,3 @@ $about = "about.php";
         <a class="fa fa-bars"><i></i></a>
     </div>
 </div>
-<!-- TODO Da rimuovere prima di consegnare
-<div><a href="php-playground.php">PLAYGROUND</a></div>
--->

@@ -9,9 +9,9 @@
         <meta name="keywords" content="musica, strumenti musicali, prenota servizio"/>
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
         <link rel="stylesheet" type="text/css" href="css/mobile.css"/>
-        <link rel="stylesheet" href= "<?= $host_path."css/print.css"?>"  media="print"  type="text/css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/print.css" media="print" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&amp;display=swap" rel="stylesheet"/>
         <script src="js/checkInput.js" type="text/javascript"></script>
         <script src="js/utility.js" type="text/javascript"></script>
     </head>
@@ -26,8 +26,8 @@
         </div>
 
         <div id="prenota-print">
-          Per prendere appuntamento con uno dei nostri esperti ti preghiamo di conttattare il numero 555-9933902. </br>
-          Oppure puoi venirci a trovare in negozio all'indirizzo: Via Trieste, 63, 35121 Padova PD.
+          <span> Per prendere appuntamento con uno dei nostri esperti ti preghiamo di conttattare il numero 555-9933902. </span>
+          <span> Oppure puoi venirci a trovare in negozio all'indirizzo: Via Trieste, 63, 35121 Padova PD. </span>
         </div>
         <?php include("footer.php"); ?>
     </body>

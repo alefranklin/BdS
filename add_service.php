@@ -13,7 +13,7 @@
         header("Location: admin.php?action=1&errore=6");
     }
 
-    if(!$descrizione || $descrizione == "" || !preg_match("/^[a-zA-Z0-9\x20]{20,200}$/", $descrizione)){
+    if(!$descrizione || $descrizione == "" || !preg_match("/^[a-zA-Z0-9\x20]{20,250}$/", $descrizione)){
         header("Location: admin.php?action=1&errore=10");
     }
 
