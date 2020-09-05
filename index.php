@@ -21,11 +21,9 @@
         <div id="main">
             <div id="content">
                 <p>
-                    <h1>La Bottega del Suono</h1>
-                    <span>Dal 1985 il tuo punto di riferimento per l'acquisto e la manutenzione dei tuoi strumenti musicali.
-                    </br> Qui potrai vedere e prenotare i servizi da noi offerti, i prodotti che abbiamo in catalogo
-                    e visualizzare i nostri contatti.
-                    </span>
+                    <h1>La Bottega del Suono</h1> 
+                    <span>Dal 1985 il tuo punto di riferimento per l'acquisto e la manutenzione dei tuoi strumenti musicali. </span>
+                    <span> Qui potrai vedere e prenotare i servizi da noi offerti, i prodotti che abbiamo in catalogo e visualizzare i nostri contatti. </span>
                 </p>
                 <img src="img/guitar_home.jpg" alt="Immagine di chitarra"/>
             </div>
