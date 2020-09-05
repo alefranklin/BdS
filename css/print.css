@@ -9,7 +9,7 @@
       font-family: 'Gotham Rounded Medium';
   }
 
-  #actual_menu, #salta-menu, #menuShowMobile, #admin-login, #back-menu, #content img, #filtri form, #form-prenotazione
+  #actual_menu, #salta-menu, #menuShowMobile, #admin-login, #back-menu, #content img, #filtri form, #form-prenotazione, #footer-link
   {
     display: none;
   }

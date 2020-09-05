@@ -107,18 +107,18 @@
     }
 
     .prodotto{
-        text-align:center;
+        text-align: center;
         display: inline-block;
-        width:24%;
+        width: 24%;
         border: solid 1px black;
         padding-bottom: 10px;
     }
 
     .prodotto-immagine{
         position: static;
-        width:auto;
+        width: auto;
         height: 20em;
-        overflow:hidden;
+        overflow: hidden;
     }
 
     #content{
