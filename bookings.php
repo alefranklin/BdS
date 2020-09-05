@@ -1,3 +1,4 @@
+<h1> Lista prenotazioni </h1>
 <?php
 if(isset($_GET['diffGiorni'])){
     $diff = $_GET['diffGiorni'];
@@ -28,14 +29,14 @@ if(isset($_GET['diffGiorni'])){
     echo "<span class=\"day-now\">$today</span>";
     echo "<span class=\"day-next\"><a href=\"admin.php?action=0&amp;diffGiorni=1\">Giorno successivo</a></span>";
 
-} 
+}
 ?>
 
 
 
 <div id="prenotazioni">
-    <?php 
-        
+    <?php
+
         $dayAppointments = getDayAppointments($today,$db_data);
         $hours = getHours();
     $row = "";
@@ -56,7 +57,7 @@ if(isset($_GET['diffGiorni'])){
                 if(trimSeconds($row["ora"]) == $hours['start'][$i]){
                     $appuntamenti[$i] = $row;
                     $row = "";
-                } else {                
+                } else {
                     $appuntamenti[$i] = 0;
                 }
             }
@@ -74,14 +75,16 @@ if(isset($_GET['diffGiorni'])){
                     $cliente = $appuntamenti[$i]["cliente"];
                     $servizi = $appuntamenti[$i]["servizi"];
                     ?>
+                    Nome:
                     <span class="cliente-appuntamento"><?= $cliente ?></span>
+                    Servizi:
                     <span class="servizi-appuntamento"><?= $servizi ?></span>
                 <?php
                 } else {
-                    ?>  
+                    ?>
                     <span class="no-appuntamento">Nessun appuntamento</span>
                     <?php
-                    
+
                 }
                 echo "</div>";
             echo "</div>";

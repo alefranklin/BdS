@@ -1,3 +1,4 @@
+<h1> Rimuovi serivizio </h1>
 <div id="rimuovi-servizio">
 <?php
     $products = getServices($db_data);

@@ -4,7 +4,7 @@ include_once("db_connection.php");
 session_start();?>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>La Bottega del Suono - Login Admin </title>
+        <title>La Bottega del Suono - Admin Panel</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
         <script src="js/checkInput.js" type="text/javascript"></script>
@@ -13,8 +13,6 @@ session_start();?>
     <body>
         <div id="main">
             <div id="content">
-                Questa è la pagina di login amministratore
-                
                 <?php
                     if(isset($_GET['errore'])){
                         echo "<p id=\"errore-get\">".$errori[$_GET['errore']]."</p>";
@@ -22,7 +20,7 @@ session_start();?>
                     if(isset($_GET['messaggio'])){
                         echo "<p id=\"messaggio-get\">".$messaggi[$_GET['messaggio']]."</p>";
                     }
-                    if(!isset($_SESSION['id'])){      
+                    if(!isset($_SESSION['id'])){
                         include("login_form.html");
                     } else {
                         include("logged_admin.php");
@@ -31,6 +29,6 @@ session_start();?>
             </div>
         </div>
 
-        
+
     </body>
 </html>

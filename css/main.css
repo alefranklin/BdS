@@ -100,7 +100,6 @@
         left:5%;
         width: 90%;
         background-color: #e65c00;
-        text-shadow: 0 0 1em black;
     }
 
     #menuShowMobile{
@@ -198,6 +197,28 @@
       display: inline-block;
       width: 140px;
       text-align: right;
+    }
+
+    .riga-prenotazione{
+      display: block;
+    }
+
+    .ora, .dati-appuntamento{
+      display: inline-block;
+      margin: 10px 0;
+    }
+
+    .ora{
+      margin-right: 5px;
+    }
+
+    .day-back, .day-next{
+      margin: 0 10px;
+    }
+
+    .cliente-appuntamento, .servizi-appuntamento{
+      font-weight: bold;
+      color: black;
     }
 }
 
