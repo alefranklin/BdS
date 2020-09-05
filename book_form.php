@@ -48,8 +48,8 @@
                       while ($row = $services->fetch_assoc()){
                   ?>
               <div class="form-element">
-                <input type="checkbox" name="servizi[]" value="<?= $row['nome'];?>" id="servizio<?= $i; ?>"/>
                 <label for="servizio<?= $i; ?>"><?= $row['nome'];?></label>
+                <input type="checkbox" name="servizi[]" value="<?= $row['nome'];?>" id="servizio<?= $i; ?>"/>
               </div>
                   <?php
                       $i += 1;
