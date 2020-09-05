@@ -1,3 +1,4 @@
+<h1> Admin Panel </h1>
 <ul>
 <li><a href="admin.php?action=0">Lista prenotazioni</a></li>
 <li><a href="admin.php?action=1">Aggiungi servizio</a></li>

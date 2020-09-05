@@ -1,5 +1,5 @@
 <div id="admin-panel">
-    <?php 
+    <?php
     if(!isset($_GET["action"]) || $_GET["action"] > 4 || $_GET["action"] < 0){
             include("select-admin-action.php");
     } else {
@@ -18,7 +18,7 @@
                 break;
             case 4:
                 include("remove_product_form.php");
-                break;        
+                break;
         }
         echo "<a href=\"admin.php\">Torna indietro</a>";
     }
