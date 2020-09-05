@@ -188,8 +188,14 @@
       display: none;
     }
 
-    input{
+    .form-element{
       display: block;
+      width: auto;
+      max-width: 40%;
+    }
+
+    .form-element input{
+      width: 30%;
     }
 }
 
