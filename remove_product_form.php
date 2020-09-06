@@ -11,7 +11,7 @@
       <span class="prodotto-categoria"><?= $row['categoria']; ?></span>
       <span class="prodotto-costo"><?= $row['costo']; ?> Euro</span>
       <form action="remove_product.php" method="post">
-          <fieldset>
+          <fieldset class="no-border">
               <input type="hidden" value="<?= $row['id']; ?>" name="product_id"/>
               <input type="hidden" value="<?= $row['img_path']; ?>" name="img_path"/>
               <input type="submit" value="Elimina prodotto"/>

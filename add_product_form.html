@@ -2,30 +2,34 @@
 <div id="aggiungi-prodotto">
     <form method="post" enctype="multipart/form-data" action="add_product.php" onsubmit="return checkProductInput()">
         <fieldset>
+            <legend>Nuovo prodotto:</legend>
             <div class="form-element">
-              <label for="nome">Nome prodotto</label>
-              <input type="text" name="nome" id="nome"/>
+              <div class="form-element"><label for="nome">Nome</label></div>
+              <div class="form-element"><input type="text" name="nome" id="nome"/></div>
             </div>
 
             <div class="form-element">
-              <label for="categoria">Categoria</label>
-              <select name="categoria" id="categoria">
-                  <option value="strumento">Strumento</option>
-                  <option value="accessorio">Accessorio</option>
-              </select>
+              <div class="form-element"><label for="categoria">Categoria</label></div>
+              <div class="form-element">
+                <select name="categoria" id="categoria">
+                    <option value="strumento">Strumento</option>
+                    <option value="accessorio">Accessorio</option>
+                </select>
+              </div>
             </div>
 
             <div class="form-element">
-              <label for="costo">Costo</label>
-              <input type="text" name="costo" id="costo"/>
+              <div class="form-element"><label for="costo">Costo</label></div>
+              <div class="form-element"><input type="text" name="costo" id="costo"/></div>
             </div>
 
             <div class="form-element">
-              <label for="immagine">Immagine</label>
-              <input type="file" name="immagine" id="immagine" accept="image/jpg, image/png, image/jpeg"/>
+              <div class="form-element"><label for="immagine">Immagine</label></div>
+              <div class="form-element"><input type="file" name="immagine" id="immagine" accept="image/jpg, image/png, image/jpeg"/></div>
             </div>
-
-            <input type="submit" value="Carica prodotto"/>
+        </fieldset>
+        <fieldset class="no-border">
+          <input type="submit" value="Carica prodotto"/>
         </fieldset>
     </form>
 

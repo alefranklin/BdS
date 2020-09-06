@@ -9,7 +9,7 @@
         <span class="servizio-nome"><?= $row['nome']; ?></span>
         <span class="servizio-costo"><?= $row['costo']; ?></span>
         <form action="remove_service.php" method="post">
-            <fieldset>
+            <fieldset class="no-border">
                 <input type="hidden" value="<?= $row['id']; ?>" name="service_id"/>
                 <input type="submit" value="Elimina servizio"/>
             </fieldset>
