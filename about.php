@@ -21,7 +21,7 @@
         <div id="main">
             <div id="content">
                 <div id="location">
-                    <h2>Dove siamo</h2>
+                    <h1>Dove siamo</h1>
                     <p>I nostri esperti di musica saranno lieti di accoglierti nel nostro negozio in Via Trieste, 63, 35121 Padova PD.</p>
                     <div id="map">
                         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeWzjBUxll39wiFmOA6nQRkpJVsDuPEPA&amp;callback=createMap" type="text/javascript"></script>

@@ -20,7 +20,7 @@
         <?php include("header.php"); ?>
         <div id="main">
             <div id="content">
-                Pagina di prenotazione
+                <h1>Prenota i nostri servizi</h1>
                 <?php include("book_form.php"); ?>
             </div>
         </div>
