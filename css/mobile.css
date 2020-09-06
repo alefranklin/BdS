@@ -13,12 +13,6 @@
         /*position: block;*/
     }
 
-    #menu div{
-        /*height: 100%;
-        width: 45%;*/
-        display:inline-block;
-    }
-
 
 
     /*#actual_menu li:not(:first-child):before{
@@ -103,7 +97,7 @@
         position:relative;
         left:5%;
         width: 90%;
-        background-color: #e65c00;
+        background-color: #ba4900;
     }
 
     .prodotto{
@@ -113,6 +107,9 @@
         /*background-size: 24%;
         /*padding-left:1%;
         padding-right:1%;*/
+        border: black 1px solid;
+        margin-bottom: 10px;
+        padding: 10px 0;
     }
 
     .prodotto-immagine{
@@ -123,19 +120,22 @@
         /*background-size: 70%;*/
     }
 
+    .prodotto-nome{
+        font-size: 1.5em
+    }
+
+    .prodotto-immagine, .prodotto-nome, .prodotto-costo, .prodotto-categoria{
+        display: block;
+    }
+
     #content{
         padding: 1em;
     }
 
     #actual_menu li{
-        display:inline-block;
         width: 100%;
         text-align: center;
     }
-
-    /*.navbar div{
-        display: inline-block;
-    }*/
 
     #menu{
         overflow: auto;
@@ -149,6 +149,14 @@
     #actual_menu{
         background-color: #292521;
         margin: 0;
+    }
+
+    #actual_menu li{
+        list-style-type: none;
+    }
+
+    #actual_menu ul{
+        padding-left: 0px;
     }
 
     /*#menuShowMobile {

@@ -29,10 +29,13 @@
         if($_GET['tipo'] == 'accessorio')   $products = getAccessoriesProducts($db_data,$priceOrder);
         if($_GET['tipo'] == "both")         $products = getProducts($db_data,$priceOrder);
     }
+    if($products->num_rows == 0 ){
+        echo "<span>Nessun prodotto presente in catalogo</span>";
+    }
     while($row = $products->fetch_assoc()){
 ?>
     <div class="prodotto">
-        <h2 class="prodotto-nome"><?= $row['nome']; ?></h2>
+        <span class="prodotto-nome"><?= $row['nome']; ?></span>
         <img class="prodotto-immagine" src="img/prodotti/<?= $row['img_path'];?>" alt="Immagine prodotto: <?= $row['nome'];?>"/>
         
         <!--<span class="prodotto-categoria"></*?= $row['categoria']; ?></span>-->
