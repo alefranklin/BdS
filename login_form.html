@@ -1,6 +1,7 @@
 <h1> Admin Login </h1>
 <form action="login.php" method="post" onsubmit="return checkLoginForm()">
     <fieldset>
+      <legend>Login:</legend>
       <div class="form-element">
         <label for="username">Username</label>
         <input type="text" id="username" name="username"/>
@@ -10,7 +11,8 @@
         <label for="password">Password</label>
         <input type="password" id="password" name="password"/>
       </div>
-
+    </fieldset>
+    <fieldset class="no-border">
       <input type="submit" value="Login"/>
     </fieldset>
 </form>
