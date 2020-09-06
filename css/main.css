@@ -28,7 +28,7 @@
     }
 
     a:link{
-        color: lightgrey;
+        color: white;
     }
 
     a:active{
@@ -40,7 +40,7 @@
     }
 
     #main a:visited{
-        color: purple;
+        color: #fffacd;
     }
 
     a:hover{
@@ -138,7 +138,7 @@
     .prodotto-nome{
         top: 0px;
         display: block;
-        font-size: 1.5em;           
+        font-size: 1.5em;
     }
 
     .prodotto-immagine{
@@ -221,7 +221,7 @@
         color: white;
         padding: 5px 10px;
     }
-    
+
     .font-bold {
         font-weight: bold;
     }

@@ -2,7 +2,7 @@
 <?php include_once("utility.php");
 include_once("db_connection.php");
 session_start();?>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it">
     <head>
         <title>La Bottega del Suono - Admin Panel</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
