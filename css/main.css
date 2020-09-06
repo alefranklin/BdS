@@ -47,9 +47,30 @@
         color: violet;
     }
 
-    #salta-menu{
-        display:none;
+    .accessibility-hide{
+        width: auto;
+        height: auto;
+        text-decoration: underline;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        background-color: #fff;
     }
+    .accessibility-show{
+         width: auto;
+         height: auto;
+         text-decoration: underline;
+         position: fixed;
+         top: 0px;
+         left: 0px;
+         z-index: 999;
+         background-color: #fff;
+     }
+
+     .accessibility-show a:visited, .accessibility-show a{
+        color: blue;
+     }
 
     #index-img{
         position: relative;
@@ -99,7 +120,7 @@
         position:relative;
         left:5%;
         width: 90%;
-        background-color: #e65c00;
+        background-color: #ba4900;
     }
 
     #menuShowMobile{
@@ -114,11 +135,25 @@
         padding-bottom: 10px;
     }
 
+    .prodotto-nome{
+        top: 0px;
+        display: block;
+        font-size: 1.5em;           
+    }
+
     .prodotto-immagine{
         position: static;
         width: auto;
-        height: 20em;
+        max-height: 20em;
         overflow: hidden;
+    }
+
+    .prodotto-categoria{
+        display: block;
+    }
+
+    .prodotto-costo{
+        display: block;
     }
 
     #content{

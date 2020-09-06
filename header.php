@@ -6,7 +6,9 @@ $prenota = "prenota.php";
 $about = "about.php";
 ?>
 
-<div id="salta-menu"><a href="#main">Vai al contenuto principale</a></div>
+<div id="salta-menu" class="accessibility-hide">
+    <a href="#main" onfocus="toggleAccessibilityTop()" onblur="toggleAccessibilityTop()">Vai al contenuto principale</a>
+</div>
 <div id="menu" class="navbar">
     <div class="titolo-nav">
         <img src="img/logo.png" alt="Logo del sito"/>

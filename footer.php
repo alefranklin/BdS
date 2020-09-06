@@ -5,6 +5,8 @@
     </div>
     <div id="footer-link">
       <a href="admin.php">Login Pannello di amministrazione</a>
-      <a href="#menu">Torna al menu</a>
+    </div>
+    <div id="torna-menu"  class="accessibility-hide">
+      <a href="#menu" onfocus="toggleAccessibilityBottom()" onblur="toggleAccessibilityBottom()">Torna al menu</a>
     </div>
 </div>
