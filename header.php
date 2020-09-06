@@ -23,6 +23,6 @@ $about = "about.php";
         </ul>
     </div>
     <div id="menuShowMobile" onclick="toggleMenu()">
-        <a class="fa fa-bars"/>
+        <a class="fa fa-bars"></a>
     </div>
 </div>
