@@ -11,7 +11,7 @@ $about = "about.php";
 </div>
 <div id="menu" class="navbar">
     <div class="titolo-nav">
-        <img src="img/logo.png" alt="Logo del sito"/>
+        <img src="img/logo.png" alt="Logo del sito La Botte del Suono"/>
     </div>
     <div id="actual_menu" class="topnav hideMenu">
         <ul>
@@ -23,6 +23,6 @@ $about = "about.php";
         </ul>
     </div>
     <div id="menuShowMobile" onclick="toggleMenu()">
-        <a class="fa fa-bars"><i></i></a>
+        <a class="fa fa-bars"/>
     </div>
 </div>
