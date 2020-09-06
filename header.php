@@ -11,7 +11,7 @@ $about = "about.php";
 </div>
 <div id="menu" class="navbar">
     <div class="titolo-nav">
-        <img src="img/logo.png" alt="Logo del sito La Botte del Suono"/>
+        <img src="img/logo.png" alt="Logo del sito La Bottega del Suono"/>
     </div>
     <div id="actual_menu" class="topnav hideMenu">
         <ul>
