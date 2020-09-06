@@ -1,13 +1,14 @@
 <div id="filtri">
 <form action="catalogo.php" method="get">
     <fieldset>
+        <legend>Filtri:</legend>
         <label for="tipo">Tipo</label>
         <select name="tipo" id="tipo">
             <option value="both">Tutti</option>
             <option value="strumento">Strumento</option>
             <option value="accessorio">Accessorio</option>
         </select>
-        <label for="tipo">Ordina prezzo</label>
+        <label for="prezzo">Ordina prezzo</label>
         <select name="prezzo" id="prezzo">
             <option value="ASC">Dal pi&ugrave; basso</option>
             <option value="DESC">Dal pi&ugrave; alto</option>

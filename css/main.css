@@ -171,7 +171,24 @@
     }
 
     fieldset {
+        border-color:#000000;
+        border-style: solid;
+        margin-top: 5px;
+        width: 500px
+    }
+
+    .no-border {
         border: 0;
+    }
+
+    legend {
+        background-color: #292521;
+        color: white;
+        padding: 5px 10px;
+    }
+    
+    .font-bold {
+        font-weight: bold;
     }
 
     #footer-info{
