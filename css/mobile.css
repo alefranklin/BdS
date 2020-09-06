@@ -30,7 +30,7 @@
     }*/
 
     a:link{
-        color: lightblue;
+        color: white;
     }
 
     a:active{
@@ -38,11 +38,11 @@
     }
 
     a:visited{
-        color: lightgrey;
+        color: #c8f7c5;
     }
 
     #main a:visited{
-        color: purple;
+        color: #fffacd;
     }
 
    /* a:hover{
